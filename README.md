@@ -1,4 +1,4 @@
-# /* CSci4061 F2018 web_server
+# CSCI4061 F2018 web_server
 * date: 12/10/2018
 * name: Guangyu Yan,  Ziqian Qiu
 
@@ -43,6 +43,7 @@ object-oriented programming (OOP). The details are as follows:
     other members of the class.
 
 Thus, when the program runs, there will
+
     1. Initialize a queue for the use of saving request
 
     2. Initialize two threads pool, one for receiving links and requests.
@@ -95,7 +96,8 @@ most of our coding and debugging work during our meeting.
 
 * Guangyu Yan
 
-    *Guangyu finished the main server program part and contributes ideas of the whole framework algorithms design.
+    Guangyu finished the main server program part and contributes ideas of the whole framework algorithms design.
 
 * Ziqian Qiu
-    *Ziqian finished the structs files and contributes ideas of the whole framework algorithms design.
+
+    Ziqian finished the structs files and contributes ideas of the whole framework algorithms design.
