@@ -1,28 +1,28 @@
-/* CSci4061 F2018 Assignment 3
-* section: one digit number
+# /* CSci4061 F2018 web_server
 * date: 12/10/2018
 * name: Guangyu Yan,  Ziqian Qiu
-* id: yanxx6300, qiuxx283/
 
-1. How to compile and run your program.
+## How to compile and run your program.
 
-Compile:
+### Compile:
 
     Step 1. make clean
+
     Step 2. make
 
-Run:
+### Run:
 ./web_server <port> <path_to_testing>/testing <num_dispatch> <num_worker> <dynamic_flag> <queue_len> <cache_entries>
 
 
-2. A brief explanation on how your program works.
+## A brief explanation on how your program works.
 
 Our program has been separated into several parts
-    Thread pool: thread_pool.c thread_pool.h
-    Cache: cache.c cache.h
-    Logger: logger.c logger.h
-    Queue: queue.c queue.h
-    Sever: sever.c
+
+      Thread pool: thread_pool.c thread_pool.h
+      Cache: cache.c cache.h
+      Logger: logger.c logger.h
+      Queue: queue.c queue.h
+      Sever: sever.c
 
 All the parts have been implemented as thread safe.
 For the convenience of extension, we use structures and function pointers for
@@ -44,19 +44,23 @@ object-oriented programming (OOP). The details are as follows:
 
 Thus, when the program runs, there will
     1. Initialize a queue for the use of saving request
+
     2. Initialize two threads pool, one for receiving links and requests.
     The other one will corresponding WITH THE requests and take the request from
     the queue. Then it will read resource from cache or disk. Then it will return
     back to the user.
+
     3. Initialize a cache.
+
     4. If there is a request about changing the threads number dynamically
     there will be a manager threads to monitoring the current load.
+
     5. After all the previous steps, the program will start all the threads and
     provide all the services to the user.
 
 
 
-3. Explanation of caching mechanism used.
+## Explanation of caching mechanism used.
 
 In the cache module, two scheduling policies of LRU and LFU are implemented.
 We will use different initializing functions to determine which strategy is used
@@ -71,7 +75,7 @@ Every time a cache-line is used, the age of all other cache-lines changes.
 
 
 
-4. Explanation of your policy to dynamically change the worker thread pool size.
+## Explanation of your policy to dynamically change the worker thread pool size.
 
 We have the following policy for dynamically changing worker thread pool size:
 
@@ -85,11 +89,12 @@ of threads to half of the original. But there will still be have at least 10
 threads working.
 
 
-5. Contributions of each team member towards the project development.
+## Contributions of each team member towards the project development.
 We did all the algorithms, coding work, documentation work and
 most of our coding and debugging work during our meeting.
 
 * Guangyu Yan
+
     *Guangyu finished the main server program part and contributes ideas of the whole framework algorithms design.
 
 * Ziqian Qiu
